@@ -10,9 +10,6 @@ function App() {
           <div className="game-wrapper">
               <Game />
           </div>
-          <div className="guess">
-              <GameInput />
-          </div>
       </div>
           );
 }

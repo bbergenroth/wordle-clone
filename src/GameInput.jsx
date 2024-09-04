@@ -4,7 +4,7 @@ function GameInput() {
     const [guess, setGuess] = React.useState('');
 
     return (
-        <>
+        <div className="guess">
             <form className="guess-input-wrapper"
                 onSubmit={(event) => {
                     event.preventDefault();
@@ -30,7 +30,7 @@ function GameInput() {
                     }}
                 />
             </form>
-        </>
+        </div>
     );
 }
 export default GameInput;
