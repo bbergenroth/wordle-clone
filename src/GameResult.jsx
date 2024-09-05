@@ -9,7 +9,7 @@ function GameResult({ guesses }) {
         <p key={guess_num} className="guess">
           {range(0, 5).map((letter_num) => (
             <span key={letter_num} className="cell">
-              {guesses[guess_num] ? guesses[guess_num][letter_num] : undefined}
+              {guesses[guess_num]?.[letter_num]}
             </span>
           ))}
         </p>
