@@ -22,7 +22,7 @@ export function checkGuess(guess, answer) {
     if (guessChars[i] === answerChars[i]) {
       result[i] = {
         letter: guessChars[i],
-        status: "correct",
+        status: "cell correct",
       };
       answerChars[i] = SOLVED_CHAR;
       guessChars[i] = SOLVED_CHAR;
@@ -36,12 +36,12 @@ export function checkGuess(guess, answer) {
       continue;
     }
 
-    let status = "incorrect";
+    let status = "cell incorrect";
     const misplacedIndex = answerChars.findIndex(
       (char) => char === guessChars[i],
     );
     if (misplacedIndex >= 0) {
-      status = "misplaced";
+      status = "cell misplaced";
       answerChars[misplacedIndex] = SOLVED_CHAR;
     }
 
