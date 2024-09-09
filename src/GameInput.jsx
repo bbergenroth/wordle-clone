@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function GameInput({ handleSubmitGuess }) {
+function GameInput({ gameStatus, handleSubmitGuess }) {
   const [guess, setGuess] = React.useState("");
 
   return (
@@ -21,6 +21,7 @@ function GameInput({ handleSubmitGuess }) {
         <input
           id="guess-input"
           required
+          disabled={gameStatus !== "running"}
           minLength={5}
           maxLength={5}
           pattern="[a-zA-Z]{5}"
@@ -37,5 +38,6 @@ function GameInput({ handleSubmitGuess }) {
 export default GameInput;
 
 GameInput.propTypes = {
+  gameStatus: PropTypes.string,
   handleSubmitGuess: PropTypes.func,
 };

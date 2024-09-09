@@ -1,4 +1,4 @@
-import PropTypes, { string } from "prop-types";
+import PropTypes from "prop-types";
 import { range } from "./utils.jsx";
 import { NUM_OF_GUESSES_ALLOWED } from "./constants.jsx";
 import { checkGuess } from "./game-helpers.jsx";
@@ -29,5 +29,5 @@ export default GameResult;
 
 GameResult.propTypes = {
   guesses: PropTypes.array,
-  answer: string,
+  answer: PropTypes.string,
 };
